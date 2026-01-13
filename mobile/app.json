@@ -1,0 +1,57 @@
+{
+  "expo": {
+    "name": "Grape",
+    "slug": "grape",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#6B46C1"
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.grape.app",
+      "infoPlist": {
+        "NSCameraUsageDescription": "Grape needs camera access to record videos",
+        "NSMicrophoneUsageDescription": "Grape needs microphone access to record audio with videos",
+        "NSPhotoLibraryUsageDescription": "Grape needs photo library access to save videos"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#6B46C1"
+      },
+      "package": "com.grape.app",
+      "permissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO"
+      ]
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    },
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow Grape to access your camera to record videos.",
+          "microphonePermission": "Allow Grape to access your microphone to record audio with videos."
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Allow Grape to access your photos.",
+          "savePhotosPermission": "Allow Grape to save videos."
+        }
+      ]
+    ]
+  }
+}
